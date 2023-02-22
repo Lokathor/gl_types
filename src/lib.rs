@@ -1,4 +1,5 @@
-![no_std]
+#![no_std]
+#![allow(non_camel_case_types)]
 
 pub use core::ffi::c_void;
 
@@ -130,11 +131,9 @@ pub type GLuint64EXT = u64;
 pub type GLsync = *mut c_void;
 
 /// `struct _cl_context;`
-#[allow(non_camel_case_types)]
 pub type _cl_context = c_void;
 
 /// `struct _cl_event;`
-#[allow(non_camel_case_types)]
 pub type _cl_event = c_void;
 
 /// ```c

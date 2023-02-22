@@ -16,6 +16,20 @@ impl GLboolean {
   pub const FALSE: Self = Self(false as _);
   pub const TRUE: Self = Self(true as _);
 }
+impl From<bool> for GLboolean {
+  #[inline]
+  #[must_use]
+  fn from(b: boolean) -> {
+    Self(b as _)
+  }
+}
+impl From<GLboolean> for bool {
+  #[inline]
+  #[must_use]
+  fn from(b: GLboolean) -> Self {
+    b.0 != 0
+  }
+}
 
 /// `typedef unsigned int GLenum;`
 pub type GLenum = core::ffi::c_uint;

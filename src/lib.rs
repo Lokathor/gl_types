@@ -30,6 +30,18 @@ impl From<GLboolean> for bool {
     b.0 != 0
   }
 }
+impl core::fmt::Debug for GLboolean {
+  #[inline]
+  fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+    core::fmt::Debug::fmt(&bool::from(*self), f)
+  }
+}
+impl core::fmt::Display for GLboolean {
+  #[inline]
+  fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+    core::fmt::Display::fmt(&bool::from(*self), f)
+  }
+}
 
 /// `typedef unsigned int GLenum;`
 pub type GLenum = core::ffi::c_uint;

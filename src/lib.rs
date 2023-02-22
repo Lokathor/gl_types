@@ -30,6 +30,13 @@ impl From<GLboolean> for bool {
     b.0 != 0
   }
 }
+impl From<GLboolean> for GLenum {
+  #[inline]
+  #[must_use]
+  fn from(b: GLboolean) -> Self {
+    GLenum::from(bool::from(b))
+  }
+}
 impl core::fmt::Debug for GLboolean {
   #[inline]
   fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {

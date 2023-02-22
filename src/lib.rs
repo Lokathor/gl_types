@@ -1,6 +1,8 @@
 #![no_std]
 #![allow(non_camel_case_types)]
 
+//! Provides the types for OpenGL and OpenGL ES.
+
 pub use core::ffi::c_void;
 
 /// `typedef unsigned char GLboolean;`

@@ -11,7 +11,7 @@ pub use core::ffi::c_void;
 /// to work with.
 #[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)]
 #[repr(transparent)]
-pub struct GLboolean(pub core::ffi::c_uchar);
+pub struct GLboolean(core::ffi::c_uchar);
 impl GLboolean {
   pub const FALSE: Self = Self(false as _);
   pub const TRUE: Self = Self(true as _);

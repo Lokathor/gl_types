@@ -19,7 +19,7 @@ impl GLboolean {
 impl From<bool> for GLboolean {
   #[inline]
   #[must_use]
-  fn from(b: boolean) -> {
+  fn from(b: bool) -> Self {
     Self(b as _)
   }
 }

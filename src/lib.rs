@@ -61,7 +61,7 @@ pub type GLdouble = core::ffi::c_double;
 /// `typedef double GLclampd;`
 pub type GLclampd = core::ffi::c_double;
 
-/// `typedef void *GLeglClientBufferEXT;`
+/// `typedef void * GLeglClientBufferEXT;`
 pub type GLeglClientBufferEXT = *mut c_void;
 
 /// `typedef void * GLeglImageOES;`
